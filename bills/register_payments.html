@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Public Services</title>
+    <link rel="stylesheet" href="../css/general_styles.css">
+    <script src="js/register.js"></script>
+    <script src="../js/general.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Payment Public Services</h1>
+</header>
+
+<nav>
+    <ul>
+        <li ><a href="../index/index.html">Inicio</a></li>
+        <li class="dropdown">
+            <a href="#">Servicios</a>
+            <div class="dropdown-content">
+                <a href="../services/search_services.html">Consultar</a>
+                <a href="../services/register_service.html">Registrar</a>
+            </div>
+        </li>
+        <li  class="selected"><a href="../bills/register_payments.html">Facturas</a></li>
+        <li><a href="../users/search_users.html">Usuarios</a></li>
+        <li><a href="../login/login.html">Salir</a></li>
+    </ul>
+</nav>
+
+<section>
+    <div class="registro-container">
+        <h1>Registro de Facturas</h1>
+        <form id="registroPaymentsForm">
+
+            <label for="id">Id de Factura:</label>
+            <input type="text" id="id" name="id" required>
+
+            <label for="service_id">Id del Servicio:</label>
+            <input type="text" id="service_id" name="service_id" required>
+
+            <label for="usuario">Id de Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="valor">Valor de Factura:</label>
+            <input type="number" id="valor" name="valor" required>
+
+            <label for="fecha">Fecha de Factura:</label>
+            <input type="date" id="fecha" name="fecha" required> 
+    
+            <button class="button" type="button" onclick="registrarFactura()">Ir a Pagar</button>
+
+            <a class="button" href="../index/index.html">Cancelar</a>
+        </form>
+
+        <div id="mensajeRegistro"></div>
+    </div>
+    
+</section>
+
+</body>
+</html>
